@@ -33,9 +33,8 @@ const posts = [
             role: "Estagiário em Desenvolvimento Web"
         },
         content: [
-            { type: "paragraph", content: "Fala galeraa 👋" },
+            { type: "paragraph", content: "Fala galeraa 👋👋" },
             { type: "paragraph", content: "Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀" },
-            { type: "paragraph", content: "Fala galeraa 👋" },
             { type: "link", content: "👉 jane.design/doctorcare" },
             { type: "link", content: "#novoprojeto" },
             { type: "link", content: "#nlw" },
@@ -61,6 +60,7 @@ function App() {
                         posts.map(post => {
                             return (
                                 <Post 
+                                    key={post.id}
                                     author={post.author}
                                     content={post.content}
                                     publishedAt={post.publishedAt}
